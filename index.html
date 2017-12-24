@@ -229,6 +229,158 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/12/24/新文档/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Oops">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Oops blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2017/12/24/新文档/" itemprop="url">未命名</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-12-24T22:51:09+08:00">
+                2017-12-24
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <hr>
+<h1 id="实验报告（五）"><a href="#实验报告（五）" class="headerlink" title="实验报告（五）"></a><center>实验报告（五）</center></h1><p>这个星期做了几道程序设计的习题，结果正确率惨不忍睹。<br>例如：</p>
+<pre><code>#include&lt;stdio.h&gt;
+int main( )
+{
+int x = 1 , a = 0 , b = 0 ;
+switch( x )
+  {
+    case 0 : b++ ;
+    case 1 : a++ ;
+    case 2 : a++ ;    b++ ;
+  }
+printf( &quot;%d,%d&quot; , a , b ) ;
+return 0 ;
+}
+</code></pre><p>我第一反应就是a=1;b=0;但是我忽略了一个指令“break”,这个程序在switch选择的时候，由于x=1；直接进行case 1;但case 1后面没有break，这个程序会接着进行下去。<br>例2：  </p>
+<pre><code>#include&lt;stdio.h&gt;
+int main( )
+{
+int x = 10 , y = 20 , t = 0 ;
+if( x == y )    t = x ; x = y ; y = t ;
+printf( &quot;%d,%d\n&quot; , x , y ) ;
+return 0 ;
+}
+</code></pre><p>这题乍一看很简单，但一不小心就掉坑里面去了，其中的if函数因为没有括号，它只与第一个t=x相匹配；<br>例3：</p>
+<pre><code>#include&lt;stdio.h&gt;
+int main( )
+{
+int i = 1 , j = 1 , k = 2 ;
+if( ( j++ || k++ ) &amp;&amp; i++ )  printf( &quot;%d,%d,%d\n&quot; , i , j , k ) ; 
+return 0 ;
+}  
+</code></pre><p>这题我填的是2,3,2；其实j++||k++中J++判断不为0，就不会判断k++；“||”左边为真时，“||”后面的语句不再执行,&lt; 语句为真 &gt; “||”左边为假时，继续判断“||”后面的值,若为真则真,若为假则假;“&amp;&amp;”左边为假时，“&amp;&amp;”后面的语句不再执行,&lt; 语句为假&gt;,“&amp;&amp;”左边为真时，继续执行“&amp;&amp;”后面的值,若为真则真,若为假则假.<br>例4：<br>已有定义：int x = 3 , y = 4 , z = 5 ; 则表达式!( x + y ) + z – 1 &amp;&amp; y + z / 2的值是<strong>___</strong>。<br>!(x+y)+z-1&amp;&amp;y+z/2<br>=!(3+4)+5-1&amp;&amp;4+5/2<br>=!7+5-1&amp;&amp;4+5/2<br>=0+4&amp;&amp;4+5/2<br>=4&amp;&amp;6<br>=1<br>运算符的优先级：<br>()最高,下来是!下来是+,-,*,/,最后是&amp;&amp;，逻辑与在左边右边只要有一个0的时候结果就为0，4和6都不为0,所以结果为1。<br>运算符的优先级就是：！&gt; 算术运算符 &gt; 关系运算符 &gt; &amp;&amp; &gt; || &gt; 赋值运算符</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/12/19/代码/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1405,7 +1557,7 @@ while(scanf(&quot;%d%d&quot;,&amp;m,&amp;n)!=EOF&amp;&amp;m&lt;=1000&amp;&amp;n&
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">5</span>
+                  <span class="site-state-item-count">6</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
